@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#68AAD6"
+    android:orientation="vertical"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:layout_width="265dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Bem-Vindo ADM"
+        android:textColor="#0B1A51"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Inicial" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextDataini"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="date" />
+
+        <ImageView
+            android:id="@+id/dataPickInicial"
+            android:layout_width="114dp"
+            android:layout_height="match_parent"
+            android:src="@android:drawable/ic_menu_day" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Data Final" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/editTextDatafim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="date" />
+
+        <ImageView
+            android:id="@+id/dataPickFinal"
+            android:layout_width="114dp"
+            android:layout_height="match_parent"
+            android:scrollbarTrackVertical="@android:drawable/ic_menu_day"
+            android:src="@android:drawable/ic_menu_month" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="227dp"
+        android:layout_height="75dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/botao_customizado2"
+        android:gravity="center"
+        android:onClick="contarclientes"
+        android:text="Gerar"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:backgroundTint="#4D7308"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="258dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ListView
+            android:id="@+id/listviewclientes2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:foregroundGravity="center_vertical|center" />
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

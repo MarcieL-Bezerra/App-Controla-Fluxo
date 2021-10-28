@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#07626E"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="110dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/btnentrada"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="38dp"
+        android:layout_marginLeft="38dp"
+        android:layout_marginBottom="81dp"
+        android:background="@drawable/botao_customizado"
+        android:gravity="center"
+        android:text="Local"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:backgroundTint="#009688" />
+
+    <Button
+        android:id="@+id/btnentrada"
+        android:layout_width="wrap_content"
+        android:layout_height="183dp"
+        android:layout_above="@+id/btnsaida"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/botao_customizado"
+        android:onClick="botaoclicado"
+        android:text="Entrada"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:backgroundTint="#4D7308" />
+
+    <Button
+        android:id="@+id/btnsaida"
+        android:layout_width="wrap_content"
+        android:layout_height="168dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="104dp"
+        android:background="@drawable/botao_customizado"
+        android:onClick="botaoclicado"
+        android:text="Saída"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:backgroundTint="#ED1616"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblclientes"
+        android:layout_width="wrap_content"
+        android:layout_height="81dp"
+        android:layout_above="@+id/lvopcoes"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="-4dp"
+        android:gravity="center"
+        android:text="QTD Atual:  0"
+        android:textAlignment="center"
+        android:textColor="#060655"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/lvopcoes"
+        android:layout_width="220dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/btnentrada"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="159dp"
+        android:layout_marginLeft="159dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="82dp"
+        android:background="@drawable/botao_customizado"
+        android:dropDownSelector="@color/teal_700"
+        android:gravity="center"
+        android:spinnerMode="dialog"
+        app:backgroundTint="#009688">
+
+    </Spinner>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:text=""
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnsaida" />
+
+    <EditText
+        android:id="@+id/TxtEditado"
+        android:layout_width="220dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/btnentrada"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="109dp"
+        android:layout_marginLeft="109dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginRight="92dp"
+        android:layout_marginBottom="20dp"
+        android:background="#F6C9C9"
+        android:ems="10"
+        android:gravity="center|center_vertical"
+        android:hint="Ex. Loja 1"
+        android:inputType="textPersonName"
+        android:textColor="#141515"
+        android:textColorHint="#ED3B3B"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="348dp"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="6dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-8651623850535492/5666459065"></com.google.android.gms.ads.AdView>
+
+    <ListView
+        android:id="@+id/listviewclientes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="4dp"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="@+id/textView2">
+
+    </ListView>
+
+</RelativeLayout>
